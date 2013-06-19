@@ -1,0 +1,7 @@
+services:
+    bafford_simplecms.routing_loader:
+        class: Bafford\SimpleCmsBundle\Services\CMSRoutingLoader
+        arguments:
+            doctrine: @doctrine
+        tags:
+            - { name: routing.loader }

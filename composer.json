@@ -1,0 +1,19 @@
+{
+    "name": "jbafford/simple-cms-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a simple cms tool",
+    "keywords": ["bafford", "simple", "cms"],
+    "homepage": "https://github.com/jbafford/SimpleCmsBundle",
+    "license": "MIT",
+    "authors": [
+        { "name": "John Bafford" }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": ">=2.1"
+    },
+    "target-dir": "Bafford/SimpleCmsBundle",
+    "autoload": {
+        "psr-0": { "Bafford\\SimpleCmsBundle": "" }
+    }
+}

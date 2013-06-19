@@ -1,0 +1,9 @@
+{% extends 'BaffordSimpleCmsBundle::layout.html.twig' %}
+
+{% block bafford_simplecms_title %}
+{{ page.title }}
+{% endblock %}
+
+{% block bafford_simplecms_content %}
+{{ page.content|raw }}
+{% endblock %}

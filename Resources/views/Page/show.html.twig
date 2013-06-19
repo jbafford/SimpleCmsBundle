@@ -1,0 +1,51 @@
+{% extends 'BaffordSimpleCmsBundle::layout.admin.html.twig' %}
+
+{% block bafford_simplecms_admin_content %}
+<h1>Page</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Slug</th>
+            <td>{{ entity.slug }}</td>
+        </tr>
+        <tr>
+            <th>Url</th>
+            <td>{{ entity.url }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ entity.title }}</td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>{{ entity.content }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('bafford_simplecms_admin_pages') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('bafford_simplecms_admin_pages_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    {% if not entity.required %}
+    <li>
+        <form action="{{ path('bafford_simplecms_admin_pages_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endif %}
+</ul>
+{% endblock %}

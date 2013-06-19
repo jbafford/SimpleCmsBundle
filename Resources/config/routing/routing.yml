@@ -1,0 +1,8 @@
+bafford_simplecms_auto:
+    resource: .
+    type:     bafford_simplecms
+
+bafford_simplecms:
+    resource: "@BaffordSimpleCmsBundle/Controller/"
+    type:     annotation
+    prefix:   /
